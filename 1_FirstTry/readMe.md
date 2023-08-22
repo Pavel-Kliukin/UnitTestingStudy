@@ -1,5 +1,7 @@
 # Jest project
 
+docs: https://jestjs.io
+
 ## 1. Create a project folder
 
 ## 2. Create package.json with `npm init`
