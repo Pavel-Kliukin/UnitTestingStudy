@@ -56,3 +56,34 @@ Should return:
 All parameter misiing: 
 
 Throw exception `missing parameter`
+
+
+### Test 5. Testing empty string as type using modified data
+
+```json
+[
+  {
+    "firstname":"Leila",
+    "lastname":"Hökki",
+    "phones":[
+      {"type":"home", "number":"12345678"},
+      {"type":"", "number":"87654321"},
+      {"type":"home", "number":"05040302"}
+    ]
+  },
+  {
+    "firstname":"Matt",
+    "lastname":"River",
+    "phones":[
+      {"type":"work", "number":"2132314"}
+    ]
+  }
+]
+```
+
+Leila Hökki and ""
+
+Should return:
+```json
+["87654321"]
+```
