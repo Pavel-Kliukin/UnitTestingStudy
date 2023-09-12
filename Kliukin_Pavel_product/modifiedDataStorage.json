@@ -1,0 +1,118 @@
+[
+  {
+    "productNumber": 1,
+    "productname": "NexGen 2",
+    "type": "radio",
+    "price": 300,
+    "stock": 10,
+    "colors": [
+      "white",
+      "yellow",
+      "orange"
+    ],
+    "info": {
+      "energyclass": "E",
+      "model": "chrome",
+      "comments": "high capacity"
+    }
+  },
+  {
+    "productNumber": 2,
+    "productname": "NexGen 2",
+    "type": "phone",
+    "price": 300,
+    "stock": 25,
+    "colors": [
+      "blue",
+      "white",
+      "red"
+    ],
+    "info": {
+      "energyclass": "A+",
+      "model": "GT",
+      "comments": "-"
+    }
+  },
+  {
+    "productNumber": 3,
+    "productname": "MaxEffect 2000",
+    "type": "tv",
+    "price": 123,
+    "stock": 100,
+    "colors": [
+      "white",
+      "yellow",
+      "blue"
+    ],
+    "info": {
+      "energyclass": "D",
+      "model": "XL",
+      "comments": "high capacity"
+    }
+  },
+  {
+    "productNumber": 4,
+    "productname": "Beast II",
+    "type": "toaster",
+    "price": 200,
+    "stock": 20,
+    "colors": [
+      "black",
+      "orange",
+      "green"
+    ],
+    "info": {
+      "energyclass": "C",
+      "model": "gold",
+      "comments": "-"
+    }
+  },
+  {
+    "productNumber": 5,
+    "productname": "Mercury",
+    "type": "toaster",
+    "price": 15,
+    "stock": 100,
+    "colors": [
+      "white",
+      "green",
+      "yellow"
+    ]
+  },
+  {
+    "productNumber": 6,
+    "productname": "Mercury2",
+    "type": "",
+    "price": 15,
+    "stock": 100,
+    "colors": [
+      "white",
+      "green",
+      "yellow"
+    ]
+  },
+  {
+    "productNumber": 7,
+    "productname": "Mercury3",
+    "type": "toaster",
+    "price": null,
+    "stock": 100,
+    "colors": [
+      "white",
+      "green",
+      "yellow"
+    ]
+  },
+  {
+    "productNumber": 8,
+    "productname": "Blade",
+    "type": "knife",
+    "price": 25,
+    "stock": null,
+    "colors": [
+      "white",
+      "green",
+      "yellow"
+    ]
+  }
+]
