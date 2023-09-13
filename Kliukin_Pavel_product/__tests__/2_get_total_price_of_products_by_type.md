@@ -11,7 +11,7 @@ returns the total price of all products that have the same type than the given s
 >>if no product with the given searchValue is  found throws an exeption `'nothing found with given'`. If a parameter searchValue is missing, an exeption `'missing parameter'` is thrown
 
 ## All tests will be using modified data:
-To the modified data will be based on the default data with three objects added. First object will have empty type `type: ""`. The second object will have undefined price `price: null`. The third object will have undefined stock `stock: null`.
+The modified data will be based on the default data with three objects added. First object will have empty type `type: ""`. The second object will have undefined price `price: null`. The third object will have undefined stock `stock: null`.
 
 ```json
 [

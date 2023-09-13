@@ -34,8 +34,15 @@ module.exports = class ProductStorage {
     }
   }
 
-  get_info() {
-
+  get_info(searchKey) {
+    if (searchKey){
+      for (const product of this.#storage) {
+        if (product.productNumber === searchKey){
+          return product.info
+        } 
+      }
+      return null
+    } else return null
   }
 
   get_a_product_matching_productNumber() {
