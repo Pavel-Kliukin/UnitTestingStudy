@@ -29,13 +29,11 @@ module.exports = class ProductStorage {
         throw new Error('nothing found with given')
       }
 
-    } else {
-      throw new Error('missing parameter')
-    }
+    } else throw new Error('missing parameter')
   }
 
   get_info(searchKey) {
-    if (searchKey){
+    if (searchKey !== undefined){
       for (const product of this.#storage) {
         if (product.productNumber === searchKey){
           return product.info
@@ -45,8 +43,15 @@ module.exports = class ProductStorage {
     } else return null
   }
 
-  get_a_product_matching_productNumber() {
-
+  get_a_product_matching_productNumber(searchKey) {
+    if (searchKey !== undefined) {
+      for (const product of this.#storage) {
+        if (product.productNumber === searchKey){
+          return product
+        } 
+      }
+      return null
+    } else throw new Error('missing parameter')
   }
 
   get_All_products_By_type() {

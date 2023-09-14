@@ -62,7 +62,8 @@ describe('Testing get_info', ()=> {
                     "model": "GT",
                     "comments": "-"
                   }],
-            [5,   undefined]
+            [5,   undefined],
+            [0,   undefined]
   ]
 
   test.each(testValues)('%s, returns %s', (searchKey, result)=> {
@@ -80,4 +81,91 @@ describe('Testing get_info', ()=> {
       .toEqual(null)
   })
 
+})
+
+describe ('Testing get_a_product_matching_productNumber', ()=> {
+  
+  const products = new ProductStorage(productsStorage);
+
+  const testValues=[
+    // searchKey    expectedResult
+            [1,   {
+                    "productNumber": 1,
+                    "productname": "NexGen 2",
+                    "type": "radio",
+                    "price": 300,
+                    "stock": 10,
+                    "colors": [
+                      "white",
+                      "yellow",
+                      "orange"
+                    ],
+                    "info": {
+                      "energyclass": "E",
+                      "model": "chrome",
+                      "comments": "high capacity"
+                    }
+                  }],
+  
+            [2,   {
+                    "productNumber": 2,
+                    "productname": "NexGen 2",
+                    "type": "phone",
+                    "price": 300,
+                    "stock": 25,
+                    "colors": [
+                      "blue",
+                      "white",
+                      "red"
+                    ],
+                    "info": {
+                      "energyclass": "A+",
+                      "model": "GT",
+                      "comments": "-"
+                    }
+                  }],
+            [5,   {
+                    "productNumber": 5,
+                    "productname": "Mercury",
+                    "type": "toaster",
+                    "price": 15,
+                    "stock": 100,
+                    "colors": [
+                      "white",
+                      "green",
+                      "yellow"
+                    ]
+                  }],
+            [0,   {
+                    "productNumber": 0,
+                    "productname": "Apple",
+                    "type": "food",
+                    "price": 5,
+                    "stock": 11,
+                    "colors": [
+                      "red",
+                      "green"
+                    ]
+                  }]
+  ]
+
+  test.each(testValues)('%s returns %s', (searchKey, result) => {
+    expect(products.get_a_product_matching_productNumber(searchKey))
+      .toEqual(result)
+  })
+
+  test('No matching product with searcKey = 10', () => {
+    expect(products.get_a_product_matching_productNumber(10))
+      .toEqual(null)
+  })
+  
+  test('No matching product with searcKey = -1', () => {
+    expect(products.get_a_product_matching_productNumber(-1))
+      .toEqual(null)
+  })
+
+  test('Parameter is missing', () => {
+    expect(() => products.get_a_product_matching_productNumber())
+      .toThrow('missing parameter')
+  })
 })

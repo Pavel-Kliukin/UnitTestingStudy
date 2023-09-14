@@ -114,5 +114,16 @@
       "green",
       "yellow"
     ]
+  },
+  {
+    "productNumber": 0,
+    "productname": "Apple",
+    "type": "food",
+    "price": 5,
+    "stock": 11,
+    "colors": [
+      "red",
+      "green"
+    ]
   }
 ]
