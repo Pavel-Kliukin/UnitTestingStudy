@@ -54,8 +54,16 @@ module.exports = class ProductStorage {
     } else throw new Error('missing parameter')
   }
 
-  get_All_products_By_type() {
-
+  get_All_products_By_type(searchValue) {
+    if (searchValue !== undefined) {
+      let products_found = []
+      for (const product of this.#storage) {
+        if (product.type === searchValue){
+          products_found.push(product)
+        } 
+      }
+      return products_found
+    } else throw new Error('missing parameter')
   }
 
   get_Price() {
