@@ -276,5 +276,31 @@ describe('Testing get_All_products_By_type', ()=> {
     expect(() => products.get_All_products_By_type())
       .toThrow('missing parameter')
   })
+})
 
+describe('Testing get_Price', ()=> {
+      
+    const products = new ProductStorage(productsStorage);
+    
+    const testValues=[
+    // productNumber  expectedResult
+                [0, 5],
+                [2, 300],
+                [7, null]
+    ]
+  
+    test.each(testValues)('%s returns %s', (productNumber, result) => {
+      expect(products.get_Price(productNumber))
+        .toEqual(result)
+    })
+  
+    test('No matching product with productNumber = 100', () => {
+      expect(() => products.get_Price(100))
+        .toThrow('nothing found with given')
+    })
+  
+    test('Parameter is missing', () => {
+      expect(() => products.get_Price())
+        .toThrow('nothing found with given')
+    })
 })

@@ -66,8 +66,15 @@ module.exports = class ProductStorage {
     } else throw new Error('missing parameter')
   }
 
-  get_Price() {
-    
+  get_Price(productNumber) {
+    if (productNumber !== undefined) {
+      for (const product of this.#storage) {
+        if (product.productNumber === productNumber){
+          return product.price
+        } 
+      } 
+      throw new Error('nothing found with given')
+    } throw new Error('nothing found with given')
   }
 
 }
