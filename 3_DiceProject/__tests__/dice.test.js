@@ -97,3 +97,27 @@ describe('Test the toString', () => {
     expect(dice.toString()).toBe('Not rolled yet')
   })
 })
+
+describe('Test the roll version 2', () => {
+  describe('create dice with no upper bound given', () => {
+    const dice = new Dice()
+    const dotCounts=[]
+
+    for (let i=0; i>10; i++){
+      test('when rolled', () => {
+        dice.roll()
+        expect(dice.dots).toBeLessThanOrEqual(1)
+        expect(dice.dots).toBeLessThanOrEqual(6)
+      })
+    }
+
+    test('dot distribution ok', ()=> {
+      for (let i=0; i<10; i++){
+        dice.roll()
+        dotCounts.push(dice.dots)
+      }
+      expect(new Set(dotCounts).size>1).toBe(true) // Set removes duplicates from array (but returns an object)
+    })
+
+  })
+})
