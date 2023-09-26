@@ -1,4 +1,4 @@
-### **get_info(searchKey)**
+?### **get_info(searchKey)**
 searches the product matching the searchKey and if match is found returns the info object otherwise null is returned
 
 >Parameters:
@@ -10,7 +10,7 @@ searches the product matching the searchKey and if match is found returns the in
 >Throws:
 >>
 
-## Test 1. Test case when given searchKey is matching with one of the products. When matching product has no info object then "undefined" will be returned.
+## Test 1. Test case when given searchKey is matching with one of the products. When matching product has no info object then "null" will be returned.
 
 ```json
 testValues=[

@@ -10,7 +10,7 @@ describe('testing callback', ()=>{
                 expect(data).toEqual([
                     { "model": "Bored T-model", "licence": "ABC-1" }
                 ]);
-                done();
+                done(); // When we test callback functions, we need to call done() to tell Jest that the test is complete.
             }
             catch(error){
                 done(error);
